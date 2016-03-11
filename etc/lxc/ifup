@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Add port to openvswitch bridge
+OVS_BRIDGE=${OVS_BRIDGE:-"ovsbr0"}
+
+ovs-vsctl --may-exist add-br ${OVS_BRIDGE}
+ovs-vsctl --if-exists del-port ${OVS_BRIDGE} $5
+ovs-vsctl --may-exist add-port ${OVS_BRIDGE} $5

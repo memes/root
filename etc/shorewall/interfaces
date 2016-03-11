@@ -1,0 +1,18 @@
+#
+# Shorewall version 4 - Interfaces File
+#
+# For information about entries in this file, type "man shorewall-interfaces"
+#
+# The manpage is also online at
+# http://www.shorewall.net/manpages/shorewall-interfaces.html
+#
+###############################################################################
+?FORMAT 2
+###############################################################################
+#ZONE		INTERFACE		OPTIONS
+net		wlan0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
+net		eth0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
+net		enx+			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
+net		tun0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
+virt		ovsbr0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
+virt		docker0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags

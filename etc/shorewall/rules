@@ -1,0 +1,70 @@
+#
+# Shorewall version 4 - Rules File
+#
+# For information on the settings in this file, type "man shorewall-rules"
+#
+# The manpage is also online at
+# http://www.shorewall.net/manpages/shorewall-rules.html
+#
+######################################################################################################################################################################################
+#ACTION		SOURCE		DEST		PROTO	DEST	SOURCE		ORIGINAL	RATE		USER/	MARK	CONNLIMIT	TIME         HEADERS         SWITCH
+#							PORT	PORT(S)		DEST		LIMIT		GROUP
+#SECTION ALL
+#SECTION ESTABLISHED
+#SECTION RELATED
+?SECTION NEW
+
+# Allow incoming syslog requests - disable when not debugging local servers
+#Syslog(ACCEPT)	net		$FW
+
+# Allow required ICMP
+AllowICMPs(ACCEPT)	$FW	all
+AllowICMPs(ACCEPT)	all	$FW
+
+# Silently drop all routing packets on net
+#BGP(DROP):none!	net		$FW
+#RIPbi(DROP):none!	net	$FW
+
+# Allow ssh trafic in
+SSH(ACCEPT)	net		$FW
+
+# Reject incoming Auth requests
+Auth(REJECT)	net		$FW
+
+# Handle P2P traffic
+ACCEPT		net		$FW		tcp	42420:42450
+
+# Skype support
+ACCEPT		net		$FW		tcp	56765
+ACCEPT		net		$FW		udp	56765
+
+# IPSec rules
+IPsecnat(ACCEPT)	net	$FW
+IPsecah(ACCEPT)		net	$FW
+IPsecnat(ACCEPT)	net	virt
+IPsecah(ACCEPT)		net	virt
+
+# Cisco (VPNC) rules
+ACCEPT		net		$FW		tcp	10000,4500
+ACCEPT		net		$FW		udp	10000,4500
+ACCEPT		net		virt		tcp	10000,4500
+ACCEPT		net		virt		udp	10000,4500
+
+# Avahi (Zeroconf) participation
+mDNS(ACCEPT)	net		$FW
+mDNS(ACCEPT)	net		virt
+
+# Uncomment to serve web traffic
+HTTP(ACCEPT)	net		$FW
+HTTPS(ACCEPT)	net		$FW
+
+# Allow steroids connection
+#ACCEPT		net		$FW		tcp	4567
+#ACCEPT		net		$FW		tcp	8180
+
+# Allow virtualised hosts to call NTP
+NTP(ACCEPT)	virt		$FW
+
+# Print server support
+#IPPserver(ACCEPT)	net	$FW
+#IPPserver(ACCEPT)	virt	$FW

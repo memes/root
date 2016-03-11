@@ -1,0 +1,13 @@
+# MEmes apt configuration settings
+APT
+{
+	Default-Release "testing";
+	Extract-Templates
+	{
+		TempDir "/var/tmp";
+	};
+	Get
+	{
+		Show-Upgraded "true";
+	}
+};

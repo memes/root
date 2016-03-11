@@ -5,5 +5,11 @@
 # These files I want to track
 !.gitignore
 
-# Udisks2 policy file to allow plugdev mounting/unmounting/unlocking
+# Files to be tracked
+!etc/apt/apt.conf.d/90memes_aptconf
 !etc/polkit-1/rules.d/99-memes.rules
+!etc/X11/Xsession.d/97memes-touchpad
+!etc/X11/Xsession.d/98memes-enable-xscreensaver
+!etc/sudoers.d/memes
+
+# doo

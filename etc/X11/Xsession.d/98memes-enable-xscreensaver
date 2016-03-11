@@ -1,0 +1,8 @@
+# MEmes: enable xscreensaver
+
+XSCREENSAVER_COMMAND=${XSCREENSAVER_COMMAND:-'/usr/bin/xscreensaver-command'}
+XSCREENSAVER=${XSCREENSAVER:-'/usr/bin/xscreensaver'}
+
+[ -x "${XSCREENSAVER_COMMAND}" ] && ${XSCREENSAVER_COMMAND} -exit
+[ -x "${XSCREENSAVER}" ] && ${XSCREENSAVER} -no-splash &
+xset s default
