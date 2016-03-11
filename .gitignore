@@ -1,0 +1,6 @@
+# Ignore all files and directories by default
+*
+.*
+
+# These files I want to track
+!.gitignore
