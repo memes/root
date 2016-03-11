@@ -7,9 +7,22 @@
 
 # Files to be tracked
 !etc/apt/apt.conf.d/90memes_aptconf
+!etc/default/docker
+!etc/default/grub
+!etc/default/shorewall
+!etc/default/shorewall6
+!etc/default/shorewal-init
+!etc/dnsmasq.d/**
+!etc/libvirt/qemu/networks/**
+!etc/libvirt/storage/**
+!etc/lxc/**
+!etc/network/interfaces.d/**
+!etc/modprobe.d/local-options.conf
 !etc/polkit-1/rules.d/99-memes.rules
+!etc/shorewall/*
+!etc/shorewall6/*
+!etc/sudoers.d/memes
+!etc/sysctl.d/local.conf
+!etc/udev/rules.d/51-android.rules
 !etc/X11/Xsession.d/97memes-touchpad
 !etc/X11/Xsession.d/98memes-enable-xscreensaver
-!etc/sudoers.d/memes
-
-# doo
