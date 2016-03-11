@@ -4,3 +4,6 @@
 
 # These files I want to track
 !.gitignore
+
+# Udisks2 policy file to allow plugdev mounting/unmounting/unlocking
+!etc/polkit-1/rules.d/99-memes.rules
