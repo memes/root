@@ -12,7 +12,8 @@
 !etc/default/shorewall
 !etc/default/shorewall6
 !etc/default/shorewal-init
-!etc/dnsmasq.d/**
+!etc/dnsmasq.d/*
+!etc/dnsmasq.d/static/*
 !etc/libvirt/qemu/networks/**
 !etc/libvirt/storage/**
 !etc/lxc/**
@@ -23,6 +24,7 @@
 !etc/shorewall6/*
 !etc/sudoers.d/memes
 !etc/sysctl.d/local.conf
+!etc/systemd/network/*
 !etc/udev/rules.d/51-android.rules
 !etc/X11/Xsession.d/97memes-touchpad
 !etc/X11/Xsession.d/98memes-enable-xscreensaver

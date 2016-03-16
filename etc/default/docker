@@ -4,7 +4,7 @@
 #DOCKER="/usr/local/bin/docker"
 
 # Use DOCKER_OPTS to modify the daemon startup options.
-DOCKER_OPTS="--iptables=false --bip=192.168.112.1/24 --dns=192.168.112.1 --dns-search=saturn.ten-us.com --exec-opt native.cgroupdriver=cgroupfs"
+DOCKER_OPTS="--iptables=false --bip=192.168.112.1/24 --dns=192.168.112.1 --dns-search=saturn.matthewemes.com --exec-opt native.cgroupdriver=cgroupfs"
 
 # If you need Docker to use an HTTP proxy, it can also be specified here.
 #export http_proxy="http://127.0.0.1:3128/"

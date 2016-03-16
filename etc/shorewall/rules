@@ -25,9 +25,6 @@ AllowICMPs(ACCEPT)	all	$FW
 #BGP(DROP):none!	net		$FW
 #RIPbi(DROP):none!	net	$FW
 
-# Allow ssh trafic in
-SSH(ACCEPT)	net		$FW
-
 # Reject incoming Auth requests
 Auth(REJECT)	net		$FW
 
@@ -55,16 +52,8 @@ mDNS(ACCEPT)	net		$FW
 mDNS(ACCEPT)	net		virt
 
 # Uncomment to serve web traffic
-HTTP(ACCEPT)	net		$FW
-HTTPS(ACCEPT)	net		$FW
-
-# Allow steroids connection
-#ACCEPT		net		$FW		tcp	4567
-#ACCEPT		net		$FW		tcp	8180
+#HTTP(ACCEPT)	net		$FW
+#HTTPS(ACCEPT)	net		$FW
 
 # Allow virtualised hosts to call NTP
 NTP(ACCEPT)	virt		$FW
-
-# Print server support
-#IPPserver(ACCEPT)	net	$FW
-#IPPserver(ACCEPT)	virt	$FW

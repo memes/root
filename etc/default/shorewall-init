@@ -3,7 +3,7 @@
 #
 # Sample: PRODUCTS="shorewall shorewall6"
 #
-PRODUCTS=""
+PRODUCTS="shorewall shorewall6"
 
 #
 # Set this to 1 if you want Shorewall-init to react to 

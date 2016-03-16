@@ -10,9 +10,9 @@
 ?FORMAT 2
 ###############################################################################
 #ZONE		INTERFACE		OPTIONS
-net		wlan0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
-net		eth0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
-net		enx+			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
+net		wl+			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
+net		en+			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
+net		eth+			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
 net		tun0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
 virt		ovsbr0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags
 virt		docker0			dhcp,logmartians,nosmurfs,optional,routefilter,tcpflags

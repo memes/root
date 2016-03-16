@@ -1,6 +1,2 @@
-# MEmes: disable Touchpad
-
-SYNCLIENT=${SYNCLIENT:-/usr/bin/synclient}
-
-# Disable the Synaptics Touchpad
-[ -x ${SYNCLIENT} ] && ${SYNCLIENT} TouchpadOff=1
+# MEmes: disable touchpad
+[ -x "$(which synclient)" -a -n "$(which synclient)" ] && $(which synclient) TouchpadOff=1
