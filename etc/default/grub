@@ -30,3 +30,6 @@ GRUB_CMDLINE_LINUX="elevator=deadline nmi_watchdog=0 net.ifnames=0"
 
 # Uncomment to get a beep at grub start
 #GRUB_INIT_TUNE="480 440 1"
+
+# Don't add other OS to menu
+GRUB_DISABLE_OS_PROBER="true"
