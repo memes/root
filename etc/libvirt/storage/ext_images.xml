@@ -1,21 +1,19 @@
 <!--
 WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
 OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
-  virsh pool-edit memes_lvm
+  virsh pool-edit ext_images
 or other application using the libvirt API.
 -->
 
-<pool type='logical'>
-  <name>memes_lvm</name>
-  <uuid>3c82796c-3672-48cf-b8a0-99dbb0f9d472</uuid>
+<pool type='dir'>
+  <name>ext_images</name>
+  <uuid>3730a295-d610-4499-93b9-cda3ef59b3bb</uuid>
   <capacity unit='bytes'>0</capacity>
   <allocation unit='bytes'>0</allocation>
   <available unit='bytes'>0</available>
   <source>
-    <name>memes_vg</name>
-    <format type='lvm2'/>
   </source>
   <target>
-    <path>/dev/memes_vg</path>
+    <path>/media/memes/libvirt_img</path>
   </target>
 </pool>
