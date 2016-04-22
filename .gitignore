@@ -26,5 +26,6 @@
 !etc/sysctl.d/local.conf
 !etc/systemd/network/*
 !etc/udev/rules.d/51-android.rules
+!etc/udev/rules.d/60-schedulers.rules
 !etc/X11/Xsession.d/97memes-touchpad
 !etc/X11/Xsession.d/98memes-enable-xscreensaver
