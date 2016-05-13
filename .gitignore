@@ -19,6 +19,7 @@
 !etc/lxc/**
 !etc/network/interfaces.d/**
 !etc/modprobe.d/local-options.conf
+!etc/pm/sleep.d/*
 !etc/polkit-1/rules.d/99-memes.rules
 !etc/shorewall/*
 !etc/shorewall6/*

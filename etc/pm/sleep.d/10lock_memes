@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# Invoke xautolock before suspending
+
+[ -n "${PM_FUNCTIONS}" ] && . "${PM_FUNCTIONS}"
+
+case "$1" in
+	hibernate|suspend)
+		[ -x "$(which xautolock)" -a -n "$(which xautolock)" ] && $(which xautolock) -locknow
+		;;
+	*)
+		exit $NA
+		;;
+esac
+ 
+exit 0

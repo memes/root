@@ -1,0 +1,20 @@
+#!/bin/sh
+#
+# Using a USB3 device on Dell XPS 15 9530 has been preventing suspend; this script attempts to disable ACPI wakeup on the
+# controllers
+
+[ -n "${PM_FUNCTIONS}" ] && . "${PM_FUNCTIONS}"
+
+case "$1" in
+	hibernate|suspend)
+		for dev in EHC1 EHC2 XHC; do
+			grep -Eq "^${dev}[[:space:]]+(S[[:digit:]][[:space:]]+)?\*enabled" /proc/acpi/wakeup >/dev/null 2>/dev/null && \
+				echo ${dev} > /proc/acpi/wakeup
+		done
+		;;
+	*)
+		exit $NA
+		;;
+esac
+ 
+exit 0
