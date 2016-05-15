@@ -34,3 +34,5 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee2", MODE="0600", 
 SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee0", MODE="0600", OWNER="memes"
 # adb protocol on hammerhead (Nexus 5)
 SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee1", MODE="0600", OWNER="memes"
+# adb protocol on Amazon Fire HD 8
+SUBSYSTEM=="usb", ATTR{idVendor}=="1949", ATTR{idProduct}=="0212", MODE="0600", OWNER="memes"
