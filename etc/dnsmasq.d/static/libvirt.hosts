@@ -1,0 +1,13 @@
+# Virtual hosts on the libvirt subnet
+192.168.111.1	ganymede.saturn.matthewemes.com	ganymede
+192.168.111.2	pasiphae.saturn.matthewemes.com	pasiphae
+192.168.111.3	sinope.saturn.matthewemes.com	sinope
+192.168.111.4	callirrhoe.saturn.matthewemes.com	callirrhoe
+192.168.111.5	megaclite.saturn.matthewemes.com	megaclite
+192.168.111.6	autonoe.saturn.matthewemes.com	autonoe
+192.168.111.7	eurydome.saturn.matthewemes.com	eurydome
+192.168.111.8	sponde.saturn.matthewemes.com	sponde
+192.168.111.9	hegemone.saturn.matthewemes.com	hegemone
+192.168.111.10	cyllene.saturn.matthewemes.com	cyllene
+192.168.111.11	aoede.saturn.matthewemes.com	aoede
+192.168.111.12	kore.saturn.matthewemes.com	kore

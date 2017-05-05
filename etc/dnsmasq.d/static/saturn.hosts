@@ -1,9 +1,0 @@
-# Virtual hosts on the saturn subnet
-192.168.112.1	phoebe.saturn.matthewemes.com	phoebe
-192.168.112.2	mimas.matthewemes.com	mimas
-192.168.112.3	enceladus.saturn.matthewemes.com	enceladus
-192.168.112.4	tethys.saturn.matthewemes.com	tethys
-192.168.112.5	dione.saturn.matthewemes.com	dione
-192.168.112.6	rhea.saturn.matthewemes.com	rhea
-192.168.112.7	titan.saturn.matthewemes.com	titan
-192.168.112.8	iapetus.saturn.matthewemes.com	iapetus
