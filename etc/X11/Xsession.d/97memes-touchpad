@@ -1,2 +1,8 @@
 # MEmes: disable touchpad
-[ -x "$(which synclient)" -a -n "$(which synclient)" ] && $(which synclient) TouchpadOff=1
+
+[ -n "$(which xinput)" -a -n "$(which gawk)" ] || exit 0
+TPID=$(xinput --list --short 2>/dev/null | gawk 'match($0, /[Tt]ouch[Pp]ad\s+id=([0-9]+)/, m) {print m[1];}')
+[ -z "${TPID}" ] && exit 0
+xinput set-prop "${TPID}" "Device Enabled" 0
+
+exit 0
