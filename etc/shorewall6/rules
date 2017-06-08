@@ -13,3 +13,26 @@
 #SECTION ESTABLISHED
 #SECTION RELATED
 ?SECTION NEW
+
+# Allow incoming syslog requests - disable when not debugging local servers
+#Syslog(ACCEPT)	net		$FW
+
+# Allow ssh trafic in
+SSH(ACCEPT)	net		$FW
+
+# Reject incoming Auth requests
+Auth(REJECT)	net		$FW
+
+# Avahi (Zeroconf) participation
+mDNS(ACCEPT)	net		$FW
+mDNS(ACCEPT)	net		virt
+
+# Uncomment to serve web traffic
+HTTP(ACCEPT)	net		$FW
+HTTPS(ACCEPT)	net		$FW
+
+# Allow virtualised hosts to call NTP
+NTP(ACCEPT)	virt		$FW
+
+# Print server support
+IPPserver(ACCEPT)	virt	$FW
