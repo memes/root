@@ -71,3 +71,14 @@ IPPserver(ACCEPT)	virt	$FW
 
 # Allow incoming calibre connections
 ACCEPT		net		$FW		tcp	9090
+
+# Allow incoming 8080 connections
+#ACCEPT		net		$FW		tcp	8080
+
+# Allow incoming web connections
+#HTTP(ACCEPT)	net		$FW
+#HTTPS(ACCEPT)	net		$FW
+
+# Allow incoming syncthing connections
+ACCEPT		net		$FW		tcp	22000
+ACCEPT		net		$FW		udp	21027
