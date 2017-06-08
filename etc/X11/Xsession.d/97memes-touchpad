@@ -4,5 +4,3 @@
 TPID=$(xinput --list --short 2>/dev/null | gawk 'match($0, /[Tt]ouch[Pp]ad\s+id=([0-9]+)/, m) {print m[1];}')
 [ -z "${TPID}" ] && exit 0
 xinput set-prop "${TPID}" "Device Enabled" 0
-
-exit 0
