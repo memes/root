@@ -6,5 +6,6 @@
   ],
   "dns-search": [
     "saturn.matthewemes.com"
-  ]
+  ],
+  "storage-driver": "overlay2"
 }
